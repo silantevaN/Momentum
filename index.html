@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="assets/favicon.ico" rel="shortcut icon" />
+  <link rel="stylesheet" href="css/owfont-regular.css" />
+  <link rel="stylesheet" href="css/style.css" />
+  <title>Momentum</title>
+</head>
+<body>
+  <header class="header">
+    <div class="player">
+      <div class="player-controls">
+        <button class="play-prev player-icon"></button>
+        <button class="play player-icon"></button>
+        <button class="play-next player-icon"></button>
+      </div>
+      <div class="progress-container">
+        <span class="song-title"></span>
+        <input type="range" value="20" min="0" max="100" step="1" class="progress" id="progress-audio">
+        <span class="current-time">00:00</span> &nbsp;/&nbsp;
+        <span class="duration">00:39</span>
+        <button class="volume-btn"></button>
+        <input type="range" value="10" min="0" max="100" step="1" class="progress" id="progress-volume">  
+      </div>
+      <ul class="play-list"></ul>
+    </div>
+    <div class="weather">
+      <input type="text" class="city" name="city" placeholder="Please enter city" value="Minsk">
+      <i class="weather-icon owf"></i>
+      <div class="weather-error"></div>
+      <div class="description-container">
+        <span class="temperature"></span>
+        <span class="weather-description"></span>
+      </div>
+      <div class="wind"></div>
+      <div class="humidity"></div>
+    </div>
+  </header>
+  <main class="main">
+    <div class="slider-icons">
+      <button class="slide-prev slider-icon"></button>
+      <button class="slide-next slider-icon"></button>
+    </div>
+    <time class="time"></time>
+    <date class="date"></date>
+    <div class="greeting-container">
+      <span class="greeting"></span>
+      <input type="text" class="name" placeholder="[Enter name]"/>
+    </div>
+  </main>
+  <footer class="footer">
+    <div class="footer-content">
+      <div class="todolist">
+        <p class="lng-list-text">What you are going to do today?</p>
+        <div class="out"></div>
+        <input type="text" class="list" placeholder="[Enter your plan]">
+        <button class="lng-btn-add">Add</button>
+      </div>
+      <div class="quote-container">
+        <button class="change-quote"></button>
+        <div>
+          <div class="quote"></div>
+          <div class="author"></div>
+        </div>  
+      </div>
+      <div class="settings">
+        <button class="setting-btn"></button>
+      </div>  
+    </div>
+    <hr>
+    <div class="footer-info">
+        <a href="https://github.com/silantevaN" class="github-link" target="_blank"> Anastasia Silanteva</a>
+    <span><b>2021</b></span>
+        <a href="https://rs.school/js/" class="rs-link" target="_blank"></a>
+    </div>
+  </footer>
+  <div id="popup" class="popup-section">
+    <div class="popup-area"></div>
+    <div class="popup-body">
+      <div class="popup-content">
+        <button class="popup_close"></button>
+          <div class="popup-settings">
+            <h3 class="lng-setting-text">Settings</h3>
+            <form>
+              <p class="settings-text lng-language">Select language</p>
+              <label class="lang" for="english">
+                <input type="radio" class="select-lang" id="english" name="lang" checked="checked" value="en">
+                <span class="checkmark"></span>
+                English
+              </label><br>
+              <label class="lang" for="russian">
+                <input type="radio" class="select-lang" id="russian" name="lang" value="ru">
+                <span class="checkmark"></span>
+                Русский
+              </label>
+              
+              <p class="settings-text lng-photos">Photos</p>
+              <label class="photos">
+                <input type="radio" checked="checked" class="select-photo" name="photos" value="github">
+                <span class="checkmark"></span>
+                GitHub
+              </label><br>
+              <label class="photos">
+                <input type="radio" name="photos" class="select-photo" value="unsplash">
+                <span class="checkmark"></span>
+                Unsplash API
+              </label><br>
+              <label class="photos">
+                <input type="radio" name="photos" class="select-photo" value="flickr">
+                <span class="checkmark"></span>
+                Flickr API
+              </label>
+
+              <p class="settings-text lng-tags">Tags</p>
+              <input type="text" class="tag" placeholder="[nature]">
+
+              <p class="settings-text lng-tools">Tools</p>
+              <div class="tools-container">
+                <label for="time" class="tools" id="time-tools">
+                  <input type="checkbox" checked="checked" name="tools" id="time" class="setting-checkbox">
+                  <span class="checkbox"></span>
+                  Time
+                </label>
+                <label class="tools" id="date-tools" for="date">
+                  <input type="checkbox" checked="checked" name="tools" id="date" class="setting-checkbox">
+                  <span class="checkbox"></span>
+                  Date
+                </label>
+                <label class="tools" id="greetings-tools" for="greetings">
+                  <input type="checkbox" checked="checked" name="tools" id="greetings" class="setting-checkbox">
+                  <span class="checkbox"></span>
+                  Greetings
+                </label>
+                <label class="tools" id="quotes-tools" for="quotes">
+                  <input type="checkbox" checked="checked" name="tools" id="quotes" class="setting-checkbox">
+                  <span class="checkbox"></span>
+                  Quotes
+                </label>
+                <label class="tools" id="weather-tools" for="weather">
+                  <input type="checkbox" checked="checked" name="tools" id="weather" class="setting-checkbox">
+                  <span class="checkbox"></span>
+                  Weather
+                </label>
+                <label class="tools" id="audio-tools" for="audioplayer">
+                  <input type="checkbox" checked="checked" name="tools" id="audioplayer" class="setting-checkbox">
+                  <span class="checkbox"></span>
+                  Audioplayer
+                </label>
+                <label class="tools" id="list-tools" for="list">
+                  <input type="checkbox" checked="checked" name="tools" id="list" class="setting-checkbox">
+                  <span class="checkbox"></span>
+                  To-do list
+                </label>
+  
+              </div>
+            </form>
+          </div>
+      </div>       
+    </div>
+     </div>
+      </div>
+  
+  </div>
+  
+  <script type="module" src="js/script.js"></script>
+</body>
+</html>
